@@ -1,0 +1,16 @@
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <%= link_to "Linkrary", root_path, class: "navbar-brand mb-0 h1 brand" %>
+    <%= link_to "Add Book", new_book_path, class: "btn btn-outline-secondary" %>
+  </div>
+</nav>
+
+<div class="px-3">
+    <ul class="list-group">
+        <% @books.each do |book| %>
+            <li>
+                <%= link_to book.title, book, class: "list-group-item list-group-item-action"  %>
+            </li>
+        <% end %>
+    </ul>
+</div>

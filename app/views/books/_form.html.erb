@@ -1,0 +1,21 @@
+<%= form_with model: book do |form| %>
+    <div class="mb-3">
+        <%= form.label :title, class: "form-label" %><br>
+        <%= form.text_field :title, class: "form-control" %>
+        <% book.errors.full_messages_for(:title).each do |message| %>
+            <div class="form-text"><%= message %></div>
+        <% end %>
+    </div>
+
+    <div class="mb-3">
+        <%= form.label :link, class: "form-label" %><br>
+        <%= form.text_area :link, class: "form-control", placeholder: "https://www.linktoresource.com" %>
+        <% book.errors.full_messages_for(:link).each do |message| %>
+            <div class="form-text"><%= message %></div>
+        <% end %>
+    </div>
+
+    <div>
+        <%= form.submit "Add Book", class: "btn btn-outline-secondary" %>
+    </div>
+<% end %>
