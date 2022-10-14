@@ -14,10 +14,13 @@
 <div class="px-3"> 
   <div class="d-flex align-items-center mb-3">
     <p class="display-6 mb-2"><%= @book.title %></p>
+
     <div class="px-3 options">
-      <a href="<%= edit_book_path(@book) %>" class="icon btn btn-outline-secondary"><i class="bi bi-pencil-fill"></i></a>
-      <a class=" icon btn btn-outline-danger" data-confirm="Are you sure you want to delete this book?" rel="nofollow" data-method="delete" href="<%= book_path(@book) %>"><i class="bi bi-trash"></i></a>
+      <a href="<%= @book.link %>" target="#" class="icon btn btn-outline-primary" title="Read" ><i class="bi bi-book"></i></a>
+
+      <a href="<%= edit_book_path(@book) %>" class="icon btn btn-outline-secondary" title="Edit"><i class="bi bi-pencil-fill"></i></a>
+
+      <a class=" icon btn btn-outline-danger" data-confirm="Are you sure you want to delete this book?" rel="nofollow" data-method="delete" href="<%= book_path(@book) %>" title="Delete"><i class="bi bi-trash"></i></a>
     </div>
   </div>
-  <%= link_to @book.link, @book.link, :target => "_blank", class: "link text-muted d-block mb-5"  %>
 </div> 
