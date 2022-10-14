@@ -1,4 +1,4 @@
-<%= form_with model: book do |form| %>
+<%= form_with class: "container p-3 mx-auto", model: book do |form| %>
     <div class="mb-3 mx-5">
         <%= form.label :title, class: "form-label" %>
         <%= form.text_field :title, class: "form-control" %>
@@ -15,7 +15,7 @@
         <% end %>
     </div>
 
-    <div class="mx-5">
+    <div class="mx-5 form-options">
         <%= form.submit "Add Book", class: "btn btn-outline-secondary" %>
         <%= link_to "Cancel", book, class: "btn btn-outline-danger"  %>
     </div>

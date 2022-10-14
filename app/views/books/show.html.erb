@@ -1,6 +1,6 @@
-<nav class="navbar bg-light">
+<nav class="navbar bg-light p-3 mx-auto">
   <div class="container-fluid">
-    <div class="d-flex align-items-center">
+    <div class="d-flex align-items-center brand-name">
       <a href="https://www.flaticon.com/free-icons/library" title="Library icons created by nawicon - Flaticon"><img src="/assets/logo.png" class="logo" alt="Library icons created by nawicon - Flaticon"></a>
       <%= link_to "Linkrary", root_path, class: "navbar-brand mb-0 h1 brand" %>
       <p class="text-muted">Library of digital books </p>
@@ -12,12 +12,12 @@
 
 
 <div class="px-3"> 
-  <div class="d-flex align-items-center">
+  <div class="d-flex align-items-center mb-3">
     <p class="display-6 mb-2"><%= @book.title %></p>
-    <div class="px-3">
-      <a href="<%= edit_book_path(@book) %>" class="btn btn-outline-secondary"><i class="bi bi-pencil-fill"></i></a>
-      <a class="btn btn-outline-danger" data-confirm="Are you sure you want to delete this book?" rel="nofollow" data-method="delete" href="<%= book_path(@book) %>"><i class="bi bi-trash"></i></a>
+    <div class="px-3 options">
+      <a href="<%= edit_book_path(@book) %>" class="icon btn btn-outline-secondary"><i class="bi bi-pencil-fill"></i></a>
+      <a class=" icon btn btn-outline-danger" data-confirm="Are you sure you want to delete this book?" rel="nofollow" data-method="delete" href="<%= book_path(@book) %>"><i class="bi bi-trash"></i></a>
     </div>
   </div>
-  <%= link_to @book.link, @book.link, :target => "_blank", class: "text-muted d-block mb-5"  %>
+  <%= link_to @book.link, @book.link, :target => "_blank", class: "link text-muted d-block mb-5"  %>
 </div> 

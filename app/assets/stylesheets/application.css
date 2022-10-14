@@ -64,6 +64,7 @@ table {
 
 a {
 	text-decoration: none;
+	word-wrap:normal;
 }
 
 .icons {
@@ -80,7 +81,7 @@ a {
 
 .navbar {
     margin-bottom: 20px;
-	height: 15vh;
+	width: 100%;
 }
 
 .list-group {
@@ -96,6 +97,65 @@ body {
 	font-family: 'Ubuntu', sans-serif;
 }
 
+.book-list {
+	width: 20%;
+}
+
+.book-list > a {
+	height: 50px;
+	word-wrap: break-word;
+	overflow: overlay;
+}
+
 .list-group {
-	gap: 10px;
+	gap: 5px;
+	height: 100%;
+	flex-wrap: wrap;
+	align-content: baseline;
+}
+
+.container {
+	height: 80vh;
+}
+
+.link {
+	word-wrap: break-word;
+}
+
+@media only screen and (max-width: 540px) {
+	.container {
+		height: 100%;
+	}
+
+	.container-fluid {
+		flex-direction: column;
+		justify-content: center!important;
+		align-items: center;
+	}
+
+	.book-list {
+		width: 100%;
+	}
+
+	.list-group {
+		flex-wrap: nowrap;
+	}
+}
+
+@media only screen and (max-width: 280px) {
+	.brand-name {
+		flex-direction: column;
+		margin-bottom: 10px;
+	}
+
+	.options {
+		display: flex;
+		gap: 10px;
+	}
+
+	.form-options {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
 }
