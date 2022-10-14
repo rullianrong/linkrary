@@ -106,6 +106,8 @@ body {
 	word-wrap: break-word;
 	overflow: overlay;
 	min-width: 230px;
+	display: flex;
+	align-items: center;
 }
 
 .list-group {
