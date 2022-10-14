@@ -1,12 +1,16 @@
 <nav class="navbar bg-light">
   <div class="container-fluid">
-    <%= link_to "Linkrary", root_path, class: "navbar-brand mb-0 h1 brand" %>
-    <%= link_to "Add Book", new_book_path, class: "btn btn-outline-secondary" %>
+    <div class="d-flex align-items-center ">
+      <a href="https://www.flaticon.com/free-icons/library" title="Library icons created by nawicon - Flaticon"><img src="/assets/logo.png" class="logo" alt="Library icons created by nawicon - Flaticon"></a>
+      <%= link_to "Linkrary", root_path, class: "navbar-brand mb-0 h1 brand" %>
+      <p class="text-muted">Library of digital books </p>
+    </div>
+      <%= link_to "Add Book", new_book_path, class: "btn btn-outline-secondary" %>
   </div>
 </nav>
 
 <div class="px-3">
-    <ul class="list-group">
+    <ul class="list-group list-group-horizontal">
         <% @books.each do |book| %>
             <li>
                 <%= link_to book.title, book, class: "list-group-item list-group-item-action"  %>

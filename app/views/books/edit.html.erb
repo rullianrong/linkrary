@@ -1,1 +1,11 @@
+<nav class="navbar bg-light">
+  <div class="container-fluid">
+    <div class="d-flex align-items-center">
+    <a href="https://www.flaticon.com/free-icons/library" title="library icons"><img src="/assets/logo.png" class="logo"></a>
+      <%= link_to "Linkrary", root_path, class: "navbar-brand mb-0 h1 brand" %>
+      <p class="text-muted">Library of digital books </p>
+    </div>
+  </div>
+</nav>
+
 <%= render "form", book: @book %>

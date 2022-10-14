@@ -63,6 +63,15 @@ table {
 }
 
 a {
+	text-decoration: none;
+}
+
+.icons {
+	color: #6c757d
+}
+
+.logo {
+	height: auto;
 }
 
 .brand {
@@ -71,8 +80,22 @@ a {
 
 .navbar {
     margin-bottom: 20px;
+	height: 15vh;
 }
 
 .list-group {
     margin-bottom: 20px;
+}
+
+.text-danger {
+	font-size: .7rem;
+	font-weight: bold;
+}
+
+body {
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.list-group {
+	gap: 10px;
 }
