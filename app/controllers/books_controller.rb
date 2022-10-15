@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.order(:title)
+    @books = Book.order(:title) # arrange the index alphabetically
   end
 
   def show
@@ -39,7 +39,7 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @book.destroy
 
-    redirect_to root_path
+    redirect_to root_path # redirects to index when deleting a book
   end
 
   private
